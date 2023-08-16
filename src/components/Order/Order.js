@@ -96,8 +96,8 @@ export const Order = (cart,setCart) => {
         <input id='adress' name='adress' />
         <label>Payment method</label>
         <select name="payment" id="payment">
-          <option defaultValue="cash">Cash</option>
-          <option defaultValue="online" selected>Online</option>
+          <option value="cash">Cash</option>
+          <option value="online" selected>Online</option>
         </select>
         <label>Your order:</label>
         <textarea id="order" defaultValue={cart.cart} name="order" readOnly></textarea>
