@@ -1,0 +1,54 @@
+.order {
+    display: flex;
+    justify-content: center;
+}
+
+.o {
+    border: 2px solid transparent;
+    background-color: #d3b7aa;
+    display: flex;
+    width: 550px;
+    padding: 10px;
+    text-align: left;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    color: #5a5031;
+}
+
+.order form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #5a5031;
+}
+
+input {
+    margin: 5px;
+    color: #5a5031;
+}
+
+#super {
+    background-color: #e04da8;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+
+#super:hover {
+    background-color: #e076b7;
+}
+
+@media screen and (max-width: 760px) {
+    .o {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 87vw;
+    }
+
+    .order img {
+        width: 80vw;
+    }
+}

@@ -1,0 +1,39 @@
+/* .app {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+} */
+body {
+    background-image: url('../public/assets/bg.png');
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    padding: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+    border: 2px solid transparent;
+    background-color: #ff99ff;
+}
+
+a:hover {
+    background-color: #ff63ae;
+}
+
+.here {
+    background-color: #ff63ae;
+}
+
+#right {
+    border-radius: 0 0 20% 0;
+}
+
+#left {
+    border-radius: 0 0 0 20%;
+}
+

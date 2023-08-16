@@ -1,0 +1,35 @@
+.photo {
+    width: 27vw;
+    text-align: center;
+    border: 5px solid transparent;
+    background-color: #d3b7aa;
+    border-radius: 20px;
+    margin: 1vw;
+}
+
+.photo img {
+    width: 27vw;
+    height: 27vw;
+    border-radius: 20px;
+}
+
+.photo button {
+    font-size: 3rem;
+    border: 2px solid transparent;
+    background-color: transparent;
+}
+
+.like {
+    color: #e04da8;
+} 
+
+@media screen and (max-width: 760px) {
+    .photo {
+        width: 80vw;
+    }
+    .photo img {
+        width: 80vw;
+        height: 80vw;
+        border-radius: 20px;
+    }
+}

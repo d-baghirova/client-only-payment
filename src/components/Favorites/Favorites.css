@@ -1,0 +1,18 @@
+.favorites {
+    display: flex;
+    flex-wrap: wrap;
+    width: 92vw;
+    margin-left: 4vw;
+}
+
+.favs {
+    text-align: center;
+    color: #5a5031;
+}
+
+@media screen and (max-width: 760px) {
+    .favorites {
+        display: block;
+        margin-left: 8vw;
+    }
+}

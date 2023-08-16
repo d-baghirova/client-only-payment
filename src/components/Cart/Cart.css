@@ -1,0 +1,24 @@
+.c {
+    display: flex;
+    flex-wrap: wrap;
+    width: 92vw;
+    margin-left: 4vw;
+    text-align: center;
+    background-color: #d3b7aa;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.cartt {
+    text-align: center;
+    color: #5a5031;
+}
+
+@media screen and (max-width: 760px) {
+    .c {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

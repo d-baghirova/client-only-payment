@@ -1,0 +1,18 @@
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    width: 92vw;
+    margin-left: 4vw;
+}
+
+@media screen and (max-width: 760px) {
+    .catalog {
+        display: block;
+        margin-left: 8vw;
+    }
+}
+
+.photogallery {
+    text-align: center;
+    color: #5a5031;
+}

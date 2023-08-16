@@ -1,0 +1,20 @@
+a {
+    background-color: #e04da8;
+    color: white;
+    border: 2px solid transparent;
+    padding: 10px;
+    text-decoration: none;
+    height: 20px;
+}
+
+#left {
+    border-radius: 0 0 0 20px;
+}
+
+#right {
+    border-radius: 0 0 20px 0;
+}
+
+a:hover {
+    background-color: #e076b7;
+} 
