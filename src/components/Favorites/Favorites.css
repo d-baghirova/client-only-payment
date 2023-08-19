@@ -10,6 +10,18 @@
     color: #5a5031;
 }
 
+.empty {
+    width: 60vw;
+    margin-left: 16vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    height: 40vh;
+    background-color: #d3b7aa;
+}
+
+
 @media screen and (max-width: 760px) {
     .favorites {
         display: block;

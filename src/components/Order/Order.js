@@ -3,6 +3,8 @@ import emailjs from '@emailjs/browser';
 import NavBar from '../NavBar/NavBar';
 import { loadStripe } from "@stripe/stripe-js";
 
+
+
 // import CardIcon from "../images/credit-card.svg";
 // import ProductImage from "../images/product-image.jpg";
 
@@ -23,9 +25,18 @@ export const Order = (cart,setCart) => {
 
   const [stripeError, setStripeError] = useState(null);
   const [isLoading, setLoading] = useState(false);
+
+  const countBill = () => {
+    let q = 0;
+    for (let p of cart.cart){
+      q += p[2];
+    }
+      return q;
+  }
+
   const item = {
     price: "price_1NbetpBoWuxzcKH7D7oUyvdP",
-    quantity: cart.cart.length
+    quantity: countBill()
   };
 
   const checkoutOptions = {
@@ -82,26 +93,51 @@ export const Order = (cart,setCart) => {
     console.log('cash');
   }
 
+  const quantityChange = (event) => {
+    const idd = event.target.id;
+    
+    const edit = cart.cart.find((p) => 
+      p[1] == idd
+    )
+
+    const ep = cart.cart.indexOf(edit);
+
+    const fArr = cart.cart.filter((p) => 
+      p[1] !== idd
+    );
+  
+    if (document.getElementById(idd).value !== ''){
+      edit[2] = Number(document.getElementById(idd).value);
+      const newArr = [...fArr.slice(0,ep), edit, ...fArr.slice(ep)];
+      cart.setCart(newArr);
+    }
+  }
+
+  const check = () => {
+    return cart.cart.map((p) => <><label>{p[1].slice(8, -4)}</label><input onChange={quantityChange} id={p[1]} defaultValue={p[2]} type="number" /></>)
+  }
+
   return (
     <div className='order'>
       <div className='o'>
       <form ref={form} onSubmit={sendEmail}>
         <label>Name: </label>
-        <input id="name" type="text" name="name" />
+        <input id="name" type="text" name="name" required />
         <label>Email: </label>
-        <input id="email" type="email" name="email" />
+        <input id="email" type="email" name="email" required />
         <label>Phone Number: </label>
-        <input id="message" name="message" />
+        <input id="message" name="message" required />
         <label>Adress:</label>
-        <input id='adress' name='adress' />
+        <input id='adress' name='adress' required />
         <label>Payment method</label>
         <select name="payment" id="payment">
           <option value="cash">Cash</option>
           <option value="online" selected>Online</option>
         </select>
         <label>Your order:</label>
-        <textarea id="order" defaultValue={cart.cart} name="order" readOnly></textarea>
-        <input onClick={ redirectToCheckout} id='super' type="submit" value="Send" />
+        {/* {<textarea id="order" defaultValue={cart.cart} name="order" readOnly></textarea>} */}
+        {check()}
+        <input onClick={ redirectToCheckout } id='super' type="submit" value="Send" />
       </form>
       <img src='/assets/payment.png' />
       </div>

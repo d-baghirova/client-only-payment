@@ -21,26 +21,26 @@ const NavBar = () => {
     const [loading, setLoading] = useState(true);
     const [cart, setCart] = useState(cartFromLocalStorage);
     const [GUINEAPATHS, setGUINEAPATHS] = useState([
-        "/assets/1.jpg",
-        "/assets/2.jpg",
-        "/assets/3.jpg",
-        "/assets/4.jpg",
-        "/assets/5.jpg",
-        "/assets/6.jpg",
-        "/assets/7.jpg",
-        "/assets/8.jpg",
-        "/assets/9.jpg",
-        "/assets/10.jpg",
-        "/assets/11.jpg",
-        "/assets/12.jpg",
-        "/assets/13.jpg",
-        "/assets/14.jpg",
-        "/assets/15.jpg",
-        "/assets/16.jpg",
-        "/assets/17.jpg",
-        "/assets/18.jpg",
-        "/assets/19.jpg",
-        "/assets/20.jpg"
+        "/assets/beautiful-chrochet-pattern.jpg", 
+        "/assets/bird.jpg", 
+        "/assets/cactus-grey.jpg", 
+        "/assets/cactus-yellow.jpg", 
+        "/assets/cactus-orange.jpg", 
+        "/assets/hearts-pink.jpg", 
+        "/assets/hearts-purple.jpg", 
+        "/assets/indian-style-blue-pillow.jpg", 
+        "/assets/indian-style-yellow-pillow.jpg", 
+        "/assets/new-year.jpg", 
+        "/assets/owl.jpg", 
+        "/assets/pink-bear.jpg", 
+        "/assets/puppy.jpg", 
+        "/assets/purple-frog.jpg", 
+        "/assets/pusheen.jpg", 
+        "/assets/rainbow.jpg", 
+        "/assets/round-pillow.jpg", 
+        "/assets/snail.jpg", 
+        "/assets/squids.jpg", 
+        "/assets/two-little-frogs.jpg"
     ]);
 
     useEffect(() => { 

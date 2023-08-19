@@ -1,8 +1,10 @@
+import './cs.css';
+
 const Cancel = () => {
   return (
-    <div>
+    <div class='cs'>
       <h1>Cancel</h1>
-      <h2>Your payment was canceled.</h2>
+      <p>Your payment was canceled.</p>
     </div>
   );
 };

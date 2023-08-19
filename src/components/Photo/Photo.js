@@ -8,22 +8,13 @@ import {useEffect, useState} from 'react';
  
 function Photo({hamster, source, favorites,  setFavorites, isRemoval, cart, setCart, isRemovalC}) {
 
-  const [qu, setQu] = useState('');
-
   const addFavs = () => {
     setFavorites([...favorites, [hamster, source]]);
-  }
+  } 
   
   const toCart = () => {
-    inputChange();
-    setCart([...cart, [hamster, source, document.getElementById(source).value]]);
+    setCart([...cart, [hamster, source, 1]]);
 }
-
-  const inputChange = () => {
-    let q = document.getElementById(source).value;
-    setQu(q);
-    console.log(q);
-  }
 
   const removeFavs = () => {
     const n = favorites.filter(h => h[0] !== hamster && h[1] !== source);
@@ -31,7 +22,6 @@ function Photo({hamster, source, favorites,  setFavorites, isRemoval, cart, setC
   }
 
   const fromCart = () => {
-    setQu(0);
     const n = cart.filter(h => h[0] !== hamster && h[1] !== source);
     setCart(n);
   }
@@ -41,32 +31,28 @@ function Photo({hamster, source, favorites,  setFavorites, isRemoval, cart, setC
       return <div className='photo'>
           <img src={source} id={hamster} />
           <button className='like' onClick={removeFavs}><FontAwesomeIcon icon={ love } /></button>
-          <button className='ca'    onClick={fromCart}><FontAwesomeIcon style={{color: '#675751'}} icon={cartS} /></button>
-          <input onChange={inputChange} id={source} type='number' min="1" max="5" required />
+          <button className='ca'  style={{color: '#675751'}}  onClick={fromCart}><FontAwesomeIcon style={{color: '#675751'}} icon={cartS} /> 15$</button>
           
         </div>
     } else if (!isRemoval && isRemovalC) {
       return <div className='photo'>
           <img src={source} id={hamster} />
           <button className='like' onClick={addFavs}><FontAwesomeIcon icon={ loved } /></button>
-          <button className='ca'    onClick={fromCart}><FontAwesomeIcon style={{color: '#675751'}} icon={cartS} /></button>
-          <input onChange={inputChange} id={source} type='number' min="1" max="5" required />
+          <button className='ca'  style={{color: '#675751'}}  onClick={fromCart}><FontAwesomeIcon style={{color: '#675751'}} icon={cartS} /> 15$</button>
           
         </div>
     } else if (isRemoval && !isRemovalC) {
       return <div className='photo'>
           <img src={source} id={hamster} />
           <button className='like' onClick={removeFavs}><FontAwesomeIcon icon={ love } /></button>
-          <button className='ca'    onClick={toCart}><FontAwesomeIcon style={{color: '#9d867c'}} icon={cartS} /></button>
-          <input onChange={inputChange} id={source} type='number' min="1" max="5" required />
+          <button className='ca'  style={{color: '#9d867c'}}  onClick={toCart}><FontAwesomeIcon style={{color: '#9d867c'}} icon={cartS} /> 15$</button>
 
         </div>
     } else if (!isRemoval && !isRemovalC) {
       return <div className='photo'>
           <img src={source} id={hamster} />
           <button className='like' onClick={addFavs}><FontAwesomeIcon icon={ loved } /></button>
-          <button className='ca'    onClick={toCart}><FontAwesomeIcon style={{color: '#9d867c'}} icon={cartS} /></button>
-          <input onChange={inputChange} id={source} type='number' min="1" max="5" required />
+          <button className='ca' style={{color: '#9d867c'}}   onClick={toCart}><FontAwesomeIcon style={{color: '#9d867c'}} icon={cartS} /> 15$</button>
 
         </div>
     }

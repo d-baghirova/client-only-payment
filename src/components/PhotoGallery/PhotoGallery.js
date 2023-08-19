@@ -8,13 +8,13 @@ function PhotoGallery({favorites, setFavorites, cart, setCart, GUINEAPATHS, getS
     const c = getSpecial(cart);
     return GUINEAPATHS.map((s, k) => {
       if (f.includes(s) && c.includes(s)){
-        return <Photo hamster={k} source={s} key={k} favorites={favorites}  setFavorites={setFavorites} isRemoval={true} cart={cart} setCart={setCart} isRemovalC={true} getSpecial={getSpecial} id={k} q='1' />
+        return <Photo hamster={k} source={s} key={k} favorites={favorites}  setFavorites={setFavorites} isRemoval={true} cart={cart} setCart={setCart} isRemovalC={true} getSpecial={getSpecial} id={k} />
       } else if (!(f.includes(s)) && c.includes(s)) {
-        return <Photo hamster={k} source={s} key={k} favorites={favorites}  setFavorites={setFavorites} isRemoval={false} cart={cart} setCart={setCart} isRemovalC={true} getSpecial={getSpecial} id={k} q='1' />
+        return <Photo hamster={k} source={s} key={k} favorites={favorites}  setFavorites={setFavorites} isRemoval={false} cart={cart} setCart={setCart} isRemovalC={true} getSpecial={getSpecial} id={k} />
       } else if (f.includes(s) && !(c.includes(s))) {
-        return <Photo hamster={k} source={s} key={k} favorites={favorites}  setFavorites={setFavorites} isRemoval={true} cart={cart} setCart={setCart} isRemovalC={false} getSpecial={getSpecial} id={k} q='0' />
+        return <Photo hamster={k} source={s} key={k} favorites={favorites}  setFavorites={setFavorites} isRemoval={true} cart={cart} setCart={setCart} isRemovalC={false} getSpecial={getSpecial} id={k} />
       } else {
-        return <Photo hamster={k} source={s} key={k} favorites={favorites}  setFavorites={setFavorites} isRemoval={false} cart={cart} setCart={setCart} getSpecial={getSpecial} id={k} q='0' />
+        return <Photo hamster={k} source={s} key={k} favorites={favorites}  setFavorites={setFavorites} isRemoval={false} cart={cart} setCart={setCart} getSpecial={getSpecial} id={k} />
       }
     });
   }

@@ -1,5 +1,8 @@
 import './Favorites.css';
 import Photo from '../Photo/Photo';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart as loved } from '@fortawesome/free-regular-svg-icons';
  
 function Favorites({ favorites,  setFavorites, cart, setCart, getSpecial }) {
 
@@ -14,10 +17,18 @@ function Favorites({ favorites,  setFavorites, cart, setCart, getSpecial }) {
     });
   }
 
+  const fullfill = () => {
+    if (favorites.length > 0){
+      return showSpecials(favorites)
+    } else {
+    return <div class='empty'><p>Your favorite pillows will appear here. Click on <FontAwesomeIcon style={{color: '#e04da8'}} icon={ loved } /> to pillows to favorites.</p></div>
+    }
+  }
+
 	return (
     <div className='favs'>
       <h1>My Favorite Pillows:</h1>
-      <div className='favorites'>{showSpecials(favorites)}</div>
+      <div className='favorites'>{fullfill()}</div>
     </div>
   );
 }

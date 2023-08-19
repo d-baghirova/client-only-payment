@@ -10,6 +10,17 @@
     margin-bottom: 20px;
 }
 
+.eempty {
+    width: 90vw;
+    padding: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    height: 40vh;
+    background-color: #d3b7aa;
+}
+
 .cartt {
     text-align: center;
     color: #5a5031;

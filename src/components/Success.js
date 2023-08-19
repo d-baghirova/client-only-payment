@@ -1,6 +1,6 @@
 const Success = () => {
   return (
-    <div>
+    <div class='cs'>
       <h1>Success</h1>
       <h2>Thank you for your purchase!</h2>
     </div>

@@ -1,6 +1,11 @@
 import './Cart.css';
 import Order from '../Order/Order';
 import Photo from '../Photo/Photo';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart as love } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as loved } from '@fortawesome/free-regular-svg-icons';
+import { faCartShopping as cartS } from '@fortawesome/free-solid-svg-icons';
  
 function Cart({ cart, setCart, favorites, setFavorites, getSpecial }) {
 
@@ -15,10 +20,18 @@ function Cart({ cart, setCart, favorites, setFavorites, getSpecial }) {
     });
   }
 
+  const fullfill = () => {
+    if (cart.length > 0){
+      return showSpecials(cart)
+    } else {
+    return <div class='eempty'><p>Pillows which will be in your shopping cart will appear here. Click on <FontAwesomeIcon style={{color: '#9d867c'}} icon={cartS} /> to add pillows to your shopping cart.</p></div>
+    }
+  }
+
 	return (
     <div className='cartt'> 
       <h1>My Shopping Cart: </h1>
-      <div className='c'>{showSpecials(cart)}</div>
+      <div className='c'>{fullfill()}</div>
       <Order cart={cart}  setCart={setCart} />
     </div>
   );
