@@ -117,6 +117,13 @@ export const Order = (cart,setCart) => {
     return cart.cart.map((p) => <><label>{p[1].slice(8, -4)}</label><input onChange={quantityChange} id={p[1]} defaultValue={p[2]} type="number" /></>)
   }
 
+  const bill = () => {
+    const b = cart.cart.map((p) => `${p[1].slice(8, -4)}  Q:${p[2]} \n`);
+    const bi = b.join('\n');
+    const bil = bi + '\nOverall: ' + countBill() * 15 + '$';
+    return bil;
+  }
+
   return (
     <div className='order'>
       <div className='o'>
@@ -134,12 +141,15 @@ export const Order = (cart,setCart) => {
           <option value="cash">Cash</option>
           <option value="online" selected>Online</option>
         </select>
-        <label>Your order:</label>
+        <label>Your order ({countBill()*15}$):</label>
         {/* {<textarea id="order" defaultValue={cart.cart} name="order" readOnly></textarea>} */}
         {check()}
+        
+        <textarea style={{display: 'none'}} id="order" defaultValue={bill()} name="order" readOnly></textarea>
+
         <input onClick={ redirectToCheckout } id='super' type="submit" value="Send" />
       </form>
-      <img src='/assets/payment.png' />
+      <img id='p' src='/assets/payment.png' />
       </div>
       <NavBar cart={cart} />
     </div>

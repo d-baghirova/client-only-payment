@@ -21,7 +21,7 @@ function PhotoGallery({favorites, setFavorites, cart, setCart, GUINEAPATHS, getS
 
 	return (
     <div className='photogallery'>
-      <h1>Catalogue: </h1>
+      <h1>Each pillow costs 15$. Catalogue: </h1>
       <div className='catalog'>{showImages()}</div>
     </div>
   );

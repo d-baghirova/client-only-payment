@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b0415d08.css",
+    "main.js": "/static/js/main.52b529c7.js",
+    "static/media/product-image.jpg": "/static/media/product-image.c393fef8c45d26ca97bd.jpg",
+    "static/media/bg.png": "/static/media/bg.ad444a3a198e4d4bd06e.png",
+    "index.html": "/index.html",
+    "static/media/credit-card.svg": "/static/media/credit-card.536f706e8ad53472a2b143af87ff5162.svg",
+    "main.b0415d08.css.map": "/static/css/main.b0415d08.css.map",
+    "main.52b529c7.js.map": "/static/js/main.52b529c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0415d08.css",
+    "static/js/main.52b529c7.js"
+  ]
+}

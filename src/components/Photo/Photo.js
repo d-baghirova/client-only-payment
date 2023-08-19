@@ -31,28 +31,28 @@ function Photo({hamster, source, favorites,  setFavorites, isRemoval, cart, setC
       return <div className='photo'>
           <img src={source} id={hamster} />
           <button className='like' onClick={removeFavs}><FontAwesomeIcon icon={ love } /></button>
-          <button className='ca'  style={{color: '#675751'}}  onClick={fromCart}><FontAwesomeIcon style={{color: '#675751'}} icon={cartS} /> 15$</button>
+          <button className='ca'  style={{color: '#675751'}}  onClick={fromCart}><FontAwesomeIcon style={{color: '#675751'}} icon={cartS} /></button>
           
         </div>
     } else if (!isRemoval && isRemovalC) {
       return <div className='photo'>
           <img src={source} id={hamster} />
           <button className='like' onClick={addFavs}><FontAwesomeIcon icon={ loved } /></button>
-          <button className='ca'  style={{color: '#675751'}}  onClick={fromCart}><FontAwesomeIcon style={{color: '#675751'}} icon={cartS} /> 15$</button>
+          <button className='ca'  style={{color: '#675751'}}  onClick={fromCart}><FontAwesomeIcon style={{color: '#675751'}} icon={cartS} /></button>
           
         </div>
     } else if (isRemoval && !isRemovalC) {
       return <div className='photo'>
           <img src={source} id={hamster} />
           <button className='like' onClick={removeFavs}><FontAwesomeIcon icon={ love } /></button>
-          <button className='ca'  style={{color: '#9d867c'}}  onClick={toCart}><FontAwesomeIcon style={{color: '#9d867c'}} icon={cartS} /> 15$</button>
+          <button className='ca'  style={{color: '#9d867c'}}  onClick={toCart}><FontAwesomeIcon style={{color: '#9d867c'}} icon={cartS} /></button>
 
         </div>
     } else if (!isRemoval && !isRemovalC) {
       return <div className='photo'>
           <img src={source} id={hamster} />
           <button className='like' onClick={addFavs}><FontAwesomeIcon icon={ loved } /></button>
-          <button className='ca' style={{color: '#9d867c'}}   onClick={toCart}><FontAwesomeIcon style={{color: '#9d867c'}} icon={cartS} /> 15$</button>
+          <button className='ca' style={{color: '#9d867c'}}   onClick={toCart}><FontAwesomeIcon style={{color: '#9d867c'}} icon={cartS} /></button>
 
         </div>
     }

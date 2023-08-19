@@ -15,6 +15,10 @@
     color: #5a5031;
 }
 
+.order img {
+    max-height:500px
+}
+
 .order form {
     display: flex;
     flex-direction: column;

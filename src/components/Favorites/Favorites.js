@@ -21,7 +21,7 @@ function Favorites({ favorites,  setFavorites, cart, setCart, getSpecial }) {
     if (favorites.length > 0){
       return showSpecials(favorites)
     } else {
-    return <div class='empty'><p>Your favorite pillows will appear here. Click on <FontAwesomeIcon style={{color: '#e04da8'}} icon={ loved } /> to pillows to favorites.</p></div>
+    return <div class='empty'><p>Your favorite pillows will appear here. Click on <FontAwesomeIcon style={{color: '#e04da8'}} icon={ loved } /> to add pillows to favorites.</p></div>
     }
   }
 
